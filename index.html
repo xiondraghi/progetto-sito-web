@@ -25,7 +25,6 @@
     
     <body>
         <div id="container">
-            <!-- HEADER -->
             <div id="header">
                 <h1>Elden Ring Blog</h1>
                 
@@ -42,7 +41,6 @@
                                 <i class="fa-solid fa-bars"></i>
                             </button>
     
-                            <!-- DROPDOWN MENU -->
                             <div class="dropdown-menu">
                                 <a href="#">Edit Profile</a>
                                 <a href="#">Settings & Privacy</a>
@@ -53,7 +51,7 @@
                 </div>
             </div>
 
-            <!-- SLIDESHOW -->
+            
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
                     <img src="img/banner.png" alt="Messmer the Impaler" title="<div class='caption-content'><span class='kicker'>THE CURSED ONE</span><h2>Messmer the Impaler</h2><span class='dlc-text'>Elden Ring DLC</span><a href='#' class='btn-check'>Check Here</a></div>" />
@@ -63,7 +61,7 @@
                 </div>
             </div>
 
-            <!-- TRIVIA SECTION -->
+           
            <div id="trivia-section">
             <h2 class="section-title">Messmer the Impaler <span class="text-gold">Collection</span></h2>
 
@@ -90,22 +88,73 @@
                 <a href="#" class="action-btn">NEWS</a>
             </div>
 
-            <div id="mes-full">
-                <p>Messaggio Full Width</p>
+            <div id="news-section">
+    
+                <div class="news-banner-wrapper">
+                    <img src="img/banner5.png" alt="Messmer Dynasty Chaos" class="banner-img">
+                </div>
+
             </div>
 
-            <div id="content">
-                <div class="articolo">
-                    <img src="img/times-square.jpg" />
-                    <h2>Testo dell'articolo</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            <h2 class="section-title">Messmer the Impaler <span class="text-gold">News</span></h2>
+           
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow left-arrow" id="prev-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <div class="carousel-window">
+                    <div class="carousel-track" id="track">
+                        <div class="deck-card">
+                            <div class="card-back">
+                                <span class="news-date">24 Maggio 2026</span>
+                                <h4>Sneak Peek</h4>
+                                <p>Anteprima esclusiva sulle nuove dinamiche del festival...</p>
+                            </div>
+                            <div class="card-front">
+                                <h3>Shadow<br>Festival</h3>
+                            </div>
+                        </div>
+
+                        <div class="deck-card">
+                            <div class="card-back">
+                                <span class="news-date">20 Maggio 2026</span>
+                                <h4>Patch Notes</h4>
+                                <p>Dettagli sugli aggiustamenti al moveset e bilanciamento...</p>
+                            </div>
+                            <div class="card-front">
+                                <h3>Update<br>1.12</h3>
+                            </div>
+                        </div>
+
+                        <div class="deck-card">
+                            <div class="card-back">
+                                <span class="news-date">15 Maggio 2026</span>
+                                <h4>Lore Drop</h4>
+                                <p>Scoperta una nuova runa nascosta nei meandri...</p>
+                            </div>
+                            <div class="card-front">
+                                <h3>Hidden<br>Rune</h3>
+                            </div>
+                        </div>
+
+                        <div class="deck-card">
+                            <div class="card-back">
+                                <span class="news-date">10 Maggio 2026</span>
+                                <h4>Event</h4>
+                                <p>Preparati al torneo PvP mensile con ricompense...</p>
+                            </div>
+                            <div class="card-front">
+                                <h3>PvP<br>Dynasty</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="articolo last">
-                    <img src="img/times-square.jpg" />
-                    <h2>Testo dell'articolo</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
+                <button class="carousel-arrow right-arrow" id="next-btn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
 
             <div id="sidebar">
@@ -119,6 +168,7 @@
                     <li><a href="#">My Link</a></li>
                 </ul>
             </div>
+
 
             <div class="clear"></div>
 
@@ -157,6 +207,54 @@
                     }
                 }
             });
-    </script>
+
+            const track = document.getElementById('track');
+            const nextBtn = document.getElementById('next-btn');
+            const prevBtn = document.getElementById('prev-btn');
+
+            let isAnimating = false;
+
+            nextBtn.addEventListener('click', () => {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                const card = track.firstElementChild;
+                const gap = parseFloat(getComputedStyle(track).gap) || 0;
+                const moveDistance = card.offsetWidth + gap;
+
+                track.style.transition = 'transform 0.4s ease-in-out';
+                track.style.transform = `translateX(-${moveDistance}px)`;
+
+                track.addEventListener('transitionend', function handler() {
+                    track.style.transition = 'none';
+                    track.style.transform = 'translateX(0)';
+                    track.appendChild(card);
+                    isAnimating = false;
+                    track.removeEventListener('transitionend', handler);
+                });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                const card = track.lastElementChild;
+                const gap = parseFloat(getComputedStyle(track).gap) || 0;
+                const moveDistance = track.firstElementChild.offsetWidth + gap;
+
+                track.insertBefore(card, track.firstElementChild);
+                track.style.transition = 'none';
+                track.style.transform = `translateX(-${moveDistance}px)`;
+                track.offsetHeight;
+                track.style.transition = 'transform 0.4s ease-in-out';
+                track.style.transform = 'translateX(0)';
+
+                track.addEventListener('transitionend', function handler() {
+                    isAnimating = false;
+                    track.removeEventListener('transitionend', handler);
+                });
+            });
+        </script>
+    
     </body>
 </html>
