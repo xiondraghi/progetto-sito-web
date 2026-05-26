@@ -37,9 +37,18 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
 
-                        <button class="icon-btn">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
+                        <div class="menu-container">
+                            <button class="icon-btn menu-btn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+    
+                            <!-- DROPDOWN MENU -->
+                            <div class="dropdown-menu">
+                                <a href="#">Edit Profile</a>
+                                <a href="#">Settings & Privacy</a>
+                                <a href="#">Log Out</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,5 +129,23 @@
             <footer id="footer"><p>Footer</p></footer>
 
         </div>
+
+        <script>
+            const menuBtn = document.querySelector('.menu-btn');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            menuBtn.addEventListener('click', function(event) {
+                dropdownMenu.classList.toggle('show');
+                event.stopPropagation();
+            });
+
+            window.addEventListener('click', function(event) {
+                if (!event.target.closest('.menu-container')) {
+                    if (dropdownMenu.classList.contains('show')) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                }
+            });
+    </script>
     </body>
 </html>

@@ -38,7 +38,7 @@ a:hover{color:#333;text-decoration:underline;}
 				font-family: 'Syne', sans-serif;
 				font-weight: bold;
 				font-size: 2.75rem;
-				font-letter-spacing: -0.02em;
+				letter-spacing: -0.02em;
 				color: #D6D6D6;
 				margin: 0;
 				text-transform: none;
@@ -96,8 +96,62 @@ a:hover{color:#333;text-decoration:underline;}
 
 		/*** DROP-DOWN MENU ***/
 
+			.menu-container {
 
-		
+   				 position: relative;
+    			display: inline-block;
+
+			}
+
+			.dropdown-menu {
+
+    			display: none;
+    			position: absolute;
+    			top: 3.5rem;
+    			right: 0;
+    			background-color: #140F17;
+    			border: 1px solid #D5BF7A;
+    			border-radius: 0.35rem;
+    			min-width: 12rem;
+    			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    			z-index: 1000;
+    			flex-direction: column;
+    			overflow: hidden;
+
+			}
+
+
+			.dropdown-menu.show {
+
+    			display: flex;
+
+			}
+
+			.dropdown-menu a {
+
+    			color: #D5BF7A;
+    			padding: 0.8rem 1.2rem;
+    			text-decoration: none;
+    			font-family: 'Source Sans Pro', sans-serif;
+    			font-size: 1rem;
+    			transition: background-color 0.3s ease, color 0.3s ease;
+    			border-bottom: 1px solid rgba(213, 191, 122, 0.1);
+
+			}
+
+			.dropdown-menu a:last-child {
+
+    			border-bottom: none;
+
+			}
+
+			.dropdown-menu a:hover {
+
+    			background-color: #822227;
+    			color: #ffffff;
+
+			}
+
 		/*** SLIDESHOW ***/	
 			.slider-wrapper {
 
