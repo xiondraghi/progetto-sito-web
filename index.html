@@ -5,15 +5,15 @@
         <title>My Simple Site</title>
         <meta http-equiv="content-type" content="text/html; charset=uft-8">
 
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 
         <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
             $(window).load(function(){
-                $('#slider').nivoSlider();
+            $('#slider').nivoSlider();
             });
         </script>
 
@@ -21,10 +21,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
     
     <body>
         <div id="container">
-
+            <!-- HEADER -->
             <div id="header">
                 <h1>Elden Ring Blog</h1>
                 
@@ -43,15 +44,17 @@
                 </div>
             </div>
 
+            <!-- SLIDESHOW -->
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
-                    <a href="http://www.google.com"><img src="img/times-square-people.jpg" alt="" title="Questa è una slide" /></a>
-                        <img src="img/times-square-traffic.jpg" alt="" />
-                        <img src="img/times-square-horse.jpg" alt="" />
-                    <a href="http://google.com"><img src="img/times-square-people.jpg" alt="" title="Questa è una slide" /></a>
+                    <img src="img/banner.png" alt="Messmer the Impaler" title="<div class='caption-content'><span class='kicker'>THE CURSED ONE</span><h2>Messmer the Impaler</h2><span class='dlc-text'>Elden Ring DLC</span><a href='#' class='btn-check'>Check Here</a></div>" />
+                    <img src="img/banner2.png" alt="Midra" title="<div class='caption-content'><span class='kicker'>LORD OF FRENZIED FLAME</span><h2>Midra</h2><span class='dlc-text'>Elden Ring DLC</span><a href='#' class='btn-check'>Check Here</a></div>" />
+                    <img src="img/banner4.png" alt="Malenia" title="<div class='caption-content'><span class='kicker'>BLADE OF MIQUELLA</span><h2>Malenia</h2><span class='dlc-text'>Elden Ring Base Game</span><a href='#' class='btn-check'>Check Here</a></div>" />
+                    <img src="img/banner3.png" alt="Ranni" title="<div class='caption-content'><span class='kicker'>LUNAR PRINCESS</span><h2>Ranni the Witch</h2><span class='dlc-text'>Elden Ring Base Game</span><a href='#' class='btn-check'>Check Here</a></div>" />
                 </div>
             </div>
 
+            <!-- HEADER -->
             <div class="item-evi">
                 <h2>Contenuto in evidenza</h2>
                 <p>Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
