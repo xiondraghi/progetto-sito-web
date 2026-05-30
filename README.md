@@ -3,7 +3,9 @@
 ## Project Overview
 This project is a complete UI/UX redesign of a classic, legacy HTML/CSS template. The objective was to modernize the structure and aesthetics, transforming a basic layout into a sleek, dark-themed, and visually striking blog inspired by the lore and atmosphere of the videogame made by Fromsoftware: *Elden Ring*
 
-The goal is to make a blog that will feauture characters like Messmer the Impaler, Midra, Malenia, and Ranni, with their unique characteristics and fan art. There will be a link to news regarding the character and a forum.
+This project serves as a digital hub for Elden Ring fans, focusing on deep-dive content for specific game characters.
+
+The primary technical goal was to build a robust, from-scratch layout without relying on heavy CSS frameworks, ensuring precise control over custom animations, spacing, and component behavior.
 
 The main protagonist of this page is Messmer the Impaler, the poster-child of the game DLC
 
@@ -12,13 +14,19 @@ The main protagonist of this page is Messmer the Impaler, the poster-child of th
 
 * **Responsive Typography (rem):** Replaced static pixel (`px`) measurements with relative units (`rem`) for better scalability and accessibility across the UI.
 
-* **Custom Nivo Slider Implementation:** * Heavily customized the legacy jQuery **Nivo Slider** plugin.
+* **Custom Nivo Slider Implementation:** Heavily customized the legacy jQuery **Nivo Slider** plugin.
     * **Technical Workaround:** Overcame the plugin's native limitations with HTML captions by injecting custom HTML structure directly into the image `title` attributes. 
     * Forced CSS overrides using `!important` to bypass inline JavaScript styles, creating a modern, semi-transparent frosted-glass caption box (`backdrop-filter: blur`).
 
 * **Interactive Dropdown Menu:** Implemented a custom hamburger menu that toggles a sleek dropdown via **Vanilla JavaScript**. It includes event propagation handling to ensure the menu closes automatically when clicking outside of it.
 
-* **Replaced the outdated "Featured Content" blocks** with a dynamic "Trivia Section" (Messmer Collection), utilizing Flexbox to create a perfectly aligned grid of square image cards (using `aspect-ratio`) and action buttons.
+* **Dynamic Trivia Section:** Replaced the outdated "Featured Content" blocks with a dynamic "Trivia Section" (Messmer Collection), utilizing Flexbox to create a perfectly aligned grid of square image cards (using `aspect-ratio`) and action buttons.
+
+* **Infinite Loop Interactive Carousel:** Built a custom horizontal scrolling carousel for the News section using Vanilla JavaScript. It features a seamless infinite loop mechanism and a unique 3D "deck of cards" hover animation, dynamically swapping `z-index` and `transform` properties to reveal hidden information.
+
+* **Related Characters Grid:** Replaced the legacy sidebar with a sleek, Flexbox-powered horizontal grid of circular character avatars, complete with interactive lift and zoom hover states.
+
+* **Modernized Footer:** Designed a clean, responsive 3-column footer using Flexbox to replace the legacy template footer, maintaining strict design consistency with the overall dark fantasy theme.
 
 * **UI Polish:** Removed default browser focus outlines for a cleaner aesthetic on interactive elements like buttons and links.
 
