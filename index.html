@@ -25,6 +25,8 @@
     
     <body>
         <div id="container">
+
+            <!-- HEADER -->
             <div id="header">
                 <h1>Elden Ring Blog</h1>
                 
@@ -51,7 +53,7 @@
                 </div>
             </div>
 
-            
+            <!-- SLIDESH0W -->
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
                     <img src="img/banner.png" alt="Messmer the Impaler" title="<div class='caption-content'><span class='kicker'>THE CURSED ONE</span><h2>Messmer the Impaler</h2><span class='dlc-text'>Elden Ring DLC</span><a href='#' class='btn-check'>Check Here</a></div>" />
@@ -61,7 +63,7 @@
                 </div>
             </div>
 
-           
+           <!-- TRIVIA SECTION -->
            <div id="trivia-section">
             <h2 class="section-title">Messmer the Impaler <span class="text-gold">Collection</span></h2>
 
@@ -87,7 +89,8 @@
                 <a href="#" class="action-btn">FORUM</a>
                 <a href="#" class="action-btn">NEWS</a>
             </div>
-
+            
+            <!-- NEWS SECTION -->
             <div id="news-section">
     
                 <div class="news-banner-wrapper">
@@ -96,7 +99,7 @@
 
             </div>
 
-            
+            <!-- CAROUSEL MENU-->
             <h2 class="section-title">Messmer the Impaler <span class="text-gold">News</span></h2>
            
             <div class="carousel-wrapper">
@@ -158,40 +161,90 @@
                 </button>
             </div>
 
-            <div id="sidebar">
-                <h2>Sidebar</h2>
-                <ul>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                </ul>
+        <!-- RELATED CHARACTERS SECTIONS -->
+            <div class="related-title-wrapper">
+                <h2 class="related-title">Check the other <span class="text-gold">characters</span></h2>
             </div>
 
+            <div class="char-grid-wrapper">
+                <div class="char-grid">
+                    
+                    <div class="char-item">
+                        <div class="char-img-box">
+                            <img src="img/marika.png" alt="Marika">
+                        </div>
+                        <h3 class="char-title-name">Marika</h3>
+                        <p class="char-subtitle">The Eternal</p>
+                    </div>
 
-            <div class="clear"></div>
+                    <div class="char-item">
+                        <div class="char-img-box">
+                            <img src="img/radagon.png" alt="Radagon">
+                        </div>
+                        <h3 class="char-title-name">Radagon</h3>
+                        <p class="char-subtitle">The Eternal</p>
+                    </div>
 
-            <div class="item-evi">
-                <h2>Info</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="char-item">
+                        <div class="char-img-box">
+                            <img src="img/miquella.png" alt="Miquella">
+                        </div>
+                        <h3 class="char-title-name">Miquella</h3>
+                        <p class="char-subtitle">The Kind</p>
+                    </div>
+                    
+                    <div class="char-item">
+                        <div class="char-img-box">
+                            <img src="img/melina.png" alt="Melina">
+                        </div>
+                        <h3 class="char-title-name">Melina</h3>
+                        <p class="char-subtitle">The Maiden</p>
+                    </div>
+
+                </div>
             </div>
-
-            <div class="item-evi">
-                <h2>Info</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <div class="item-evi">
-                <h2>Info</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <footer id="footer"><p>Footer</p></footer>
 
         </div>
 
+        <!-- FOOTER -->
+         <footer class="site-footer">
+            <div class="footer-content">
+
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4 class="footer-title">Credits</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">Artists</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">Patrons</a></li>
+                            </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Info</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">This blog</a></li>
+                            </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Contacts</h4>
+                            <ul class="footer-links">
+                                <li>+39 02 50649621</li>
+                                <li>eldenringblog@gmail.com</li>
+                            </ul>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    Copyright © Nicole Caravello
+                </div>
+                
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT -->
         <script>
             const menuBtn = document.querySelector('.menu-btn');
             const dropdownMenu = document.querySelector('.dropdown-menu');
@@ -256,6 +309,7 @@
                 });
             });
         </script>
+
     
     </body>
 </html>
